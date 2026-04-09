@@ -1,0 +1,45 @@
+HOW TO RUN THE COLLEGE MANAGEMENT SYSTEM
+==========================================
+
+STEP 1: Start Backend
+---------------------
+1. Double-click "start-backend.bat"
+2. A black window will open
+3. Wait until you see: "Server running on port 5000"
+4. Keep this window OPEN
+
+STEP 2: Start Frontend
+----------------------
+1. Double-click "start-frontend.bat"
+2. Another black window will open
+3. Wait until you see: "Local: http://localhost:5173/"
+4. Keep this window OPEN
+
+STEP 3: Open Website
+--------------------
+1. Open your web browser (Chrome/Edge/Firefox)
+2. Go to: http://localhost:5173
+3. You should see the College Management System!
+
+IMPORTANT NOTES:
+----------------
+- Keep BOTH windows open while using the website
+- If you close them, the website will stop working
+- To stop: Close both black windows
+
+TROUBLESHOOTING:
+----------------
+If localhost:5173 doesn't open:
+1. Make sure both windows are still open
+2. Check if you see any RED error messages
+3. Try typing: http://127.0.0.1:5173 instead
+4. Make sure no antivirus is blocking it
+
+DATABASE SETUP (Required for data to work):
+-------------------------------------------
+The website will load but won't show student/subject data until you:
+1. Setup MySQL database on Railway (see QUICK_START.md)
+2. Update backend/.env with database credentials
+3. Restart the backend
+
+Need help? Check QUICK_START.md for detailed instructions.
