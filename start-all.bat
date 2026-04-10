@@ -1,18 +1,10 @@
-@echo off
-echo Starting Student Attendance Management System...
-echo.
+dbms project commands are
+step1:cd backend
+node server.js
 
-echo Starting Backend Server...
-start cmd /k "cd backend && npm start"
+step2:cd frontend
+npm run dev
 
-timeout /t 3 /nobreak > nul
+step3:cd backend
+node -e "import('better-sqlite3').then(({default: D}) => { const db = new D('attendance.db'); console.table(db.prepare('SELECT a.id, s.name as student, sub.subject_name as subject, a.date, a.status FROM attendance a JOIN students s ON a.student_id=s.id JOIN subjects sub ON a.subject_id=sub.id').all()); })"
 
-echo Starting Frontend Server...
-start cmd /k "cd frontend && npm run dev"
-
-echo.
-echo Both servers are starting...
-echo Backend: http://localhost:5000
-echo Frontend: http://localhost:5173
-echo.
-pause
